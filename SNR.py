@@ -15,9 +15,10 @@ def SNR(freq,mag_power_acc,start,stop):
     harmonics = []
     for i in range(1,5):
         harmonic_freqs = i*freq_max
-        harmonics.append(harmonic_freqs)
+        harmonics.append(harmonic_freqs) # collecting harmonic frequency
     
-    noise_without_THD = [pair for pair in zipped_list if not (any(np.abs(pair[0] - h)< tolerance for h in harmonics))]
+    #having a zipped list whitout harmonics with magnitude , tolerance of 0.05e6 for the harmonics
+    noise_without_THD = [pair for pair in zipped_list if not (any(np.abs(pair[0] - h)< tolerance for h in harmonics))] 
     mags_power_noise_THD= list(zip(*noise_without_THD))[1]
     mags_power_signal = list(zip(*signal_part))[1]
 
