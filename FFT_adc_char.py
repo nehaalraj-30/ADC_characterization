@@ -5,7 +5,7 @@ def FFT(filename,point_1,point_2):
     data = []
     
     with open(filename, "r") as f:
-        data = np.array([float(line.strip()) for line in f]) #line strip removes /n(newline) in file depends on file 
+        data = np.array([float(line.strip()) for line in f]) #line strip removes /n(newline) in file , return as float
 
     
     data = data[point_1:point_2]    
