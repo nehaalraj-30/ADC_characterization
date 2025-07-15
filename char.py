@@ -103,7 +103,7 @@ ENOB_8k = ENOB(SINAD_value_8k)
 print(f"ENOB is = {ENOB_8k} \n")
 
 #SFDR
-SFDR_8k = SFDR(mag_power_acc,mags_noise_8k)
+SFDR_8k = SFDR(mag_power_acc)
 print(f"SFDR is = {SFDR_8k} \n")
 
 
