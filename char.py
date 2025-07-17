@@ -95,8 +95,9 @@ SNR_8k = SNR(freq_8k,mag_power_acc,start,stop)
 print(f"SNR = {SNR_8k} \n")
 
 # SINAD
-SINAD_value_8k,noise_8k,mags_noise_8k = SINAD(freq_8k,mag_power_acc,start,stop)
+SINAD_value_8k,noise_8k,signal_8k = SINAD(freq_8k,mag_power_acc,start,stop)
 print(f"SINAD = {SINAD_value_8k} \n")
+
 
 #ENOB
 ENOB_8k = ENOB(SINAD_value_8k)

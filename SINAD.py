@@ -17,4 +17,4 @@ def SINAD(freq,mag_power_acc,start,stop):
 
     SINAD = 10*np.log10(mean_power_signal/mean_power_noise)
 
-    return SINAD,mean_power_noise,mags_power_noise
+    return SINAD,mean_power_noise,mean_power_signal
